@@ -26,8 +26,8 @@ fi
 
 SHA="${1}"
 
-INSTALLER_DIR=${GOPATH}/src/istio.io/installer
-OUT_DIR=${GOPATH}/src/istio.io/operator/data/charts
+INSTALLER_DIR=${PWD}/data/installer
+OUT_DIR=${PWD}/data/charts
 
 if [[ ! -d "${INSTALLER_DIR}" ]]; then
     git clone https://github.com/istio/installer.git "${INSTALLER_DIR}"

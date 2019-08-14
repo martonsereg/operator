@@ -29,3 +29,4 @@ mesh-cli.log
 #mandiff output
 out/
 data/charts/
+data/installer/

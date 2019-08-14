@@ -56,9 +56,9 @@ endif
 
 export GOOS ?= $(GOOS_LOCAL)
 
-RUN = docker run -t --sig-proxy=true -u $(UID) --rm \
-	-e GOOS="$(GOOS)" \
-	-e GOARCH="$(GOARCH)" \
+RUN = docker run -t --sig-proxy=true --rm \
+	-e GOOS_HOST="$(GOOS)" \
+	-e GOARCH_HOST="$(GOARCH)" \
 	-e GOBIN="$(GOBIN)" \
 	-v /etc/passwd:/etc/passwd:ro \
 	-v $(readlink /etc/localtime):/etc/localtime:ro \
